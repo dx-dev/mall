@@ -1,8 +1,12 @@
 function user(user) {
-  console.log('username:' + user);
+  console.log('user message');
 }
+user.prototype.username = (username) => {
+  console.log('username:' + username);
+};
 user.prototype.password = (password) => {
   console.log('password:' + password);
 };
-user = new user('dx');
+user = new user();
+user.username('dx');
 user.password('123456');
